@@ -1,0 +1,18 @@
+<section class="projects">
+
+  <h2>Key Projects</h2>
+
+  <div class="project-card" *ngFor="let project of projects">
+
+    <h3>{{ project.title }}</h3>
+    <p class="desc">{{ project.description }}</p>
+
+    <ul>
+      <li *ngFor="let point of project.highlights">
+         {{ point }}
+      </li>
+    </ul>
+
+  </div>
+
+</section>

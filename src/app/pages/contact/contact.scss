@@ -1,0 +1,58 @@
+.contact {
+  padding: 80px 0;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-info {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.linkedin,
+.resume {
+  display: inline-block;
+  margin-top: 10px;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background: #38bdf8;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 13px;
+}

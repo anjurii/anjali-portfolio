@@ -1,0 +1,58 @@
+<section class="contact">
+
+  <h2>Contact Me</h2>
+
+  <div class="contact-container">
+
+    <div class="contact-info">
+      <h3>Let’s Connect 🚀</h3>
+      <p>
+        I'm open to Angular Frontend / Full Stack opportunities.
+        Feel free to reach out!
+      </p>
+
+      <p><strong>Email:</strong> anjalichandwadkar2000@gmail.com</p>
+      <p><strong>Location:</strong> Pune, Maharashtra</p>
+
+      <a 
+        href="https://www.linkedin.com/in/anjali-chandwadkar" 
+        target="_blank"
+        class="linkedin">
+        LinkedIn Profile
+      </a>
+
+      <br><br>
+
+      <a href="/assets/Anjali_Chandwadkar_Angular_Developer.pdf" download class="resume">
+        Download Resume
+      </a>
+    </div>
+
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+
+      <input type="text" placeholder="Your Name" formControlName="name" />
+      <div class="error" *ngIf="submitted && contactForm.controls.name.errors">
+        Name is required
+      </div>
+
+      <input type="email" placeholder="Your Email" formControlName="email" />
+      <div class="error" *ngIf="submitted && contactForm.controls.email.errors">
+        Enter valid email
+      </div>
+
+      <textarea 
+        rows="5"
+        placeholder="Your Message"
+        formControlName="message">
+      </textarea>
+      <div class="error" *ngIf="submitted && contactForm.controls.message.errors">
+        Message must be at least 10 characters
+      </div>
+
+      <button type="submit">Send Message</button>
+
+    </form>
+
+  </div>
+
+</section>

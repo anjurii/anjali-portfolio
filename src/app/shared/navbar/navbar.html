@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="logo">Anjali Chandwadkar</div>
+
+  <div class="nav-links" [class.active]="menuOpen">
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/skills" routerLinkActive="active">Skills</a>
+    <a routerLink="/projects" routerLinkActive="active">Projects</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </div>
+
+  <div class="hamburger" (click)="menuOpen = !menuOpen">
+    ☰
+  </div>
+</nav>

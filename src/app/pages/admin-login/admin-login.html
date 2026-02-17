@@ -1,0 +1,25 @@
+<div class="admin-login-wrapper">
+  <div class="admin-card">
+    <h2>Admin Login</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <input
+        type="text"
+        placeholder="Username"
+        formControlName="username"
+      />
+
+      <input
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+      />
+
+      <button type="submit">
+        Login
+      </button>
+
+    </form>
+  </div>
+</div>

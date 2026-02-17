@@ -1,0 +1,29 @@
+.projects {
+  padding: 80px 0;
+}
+
+.project-card {
+  background: #1e293b;
+  padding: 30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background: #273549;
+}
+
+h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.desc {
+  margin-bottom: 15px;
+}
+
+ul {
+  padding-left: 15px;
+}

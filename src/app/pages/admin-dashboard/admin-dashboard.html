@@ -1,0 +1,27 @@
+<div class="dashboard-wrapper">
+
+  <div class="dashboard-header">
+    <h2>Admin Dashboard</h2>
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card">
+      <h3>Total Messages</h3>
+      <p>{{ messages.length }}</p>
+    </div>
+  </div>
+
+  <div class="messages-container">
+    <div class="message-card" *ngFor="let msg of messages; trackBy: trackById">
+      <div class="message-header">
+        <h4>{{ msg.name }}</h4>
+        <span>{{ msg.createdAt | date:'medium' }}</span>
+      </div>
+
+      <p class="email">{{ msg.email }}</p>
+      <p class="message">{{ msg.message }}</p>
+    </div>
+  </div>
+
+</div>

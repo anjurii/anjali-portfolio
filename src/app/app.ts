@@ -1,12 +1,17 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { Component } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
+import { Navbar } from './shared/navbar/navbar';
+import { NgIf, NgTemplateOutlet } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, Navbar, NgIf],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
-  protected readonly title = signal('anjali-portfolio');
+export class AppComponent {
+constructor(private router: Router) {}
+  isAdminRoute(): boolean {
+    return this.router.url.includes('admin');
+  }
 }
