@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../../core/service/auth.service';
 import { Router } from '@angular/router';
 import { ChangeDetectorRef } from '@angular/core';
-
+import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-admin-dashboard',
   standalone: true,
@@ -24,7 +24,7 @@ export class AdminDashboard implements OnInit {
   ) {}
 
  ngOnInit() {
-  this.http.get<any[]>('http://localhost:3000/api/contacts')
+  this.http.get<any[]>(`${environment.apiUrl}/api/contacts`)
     .subscribe(data => {
       console.log('Loaded messages:', data);
       this.messages = data;
